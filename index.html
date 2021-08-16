@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Trip-vago Inicio</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">Trip-vago</a>
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Destino</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+        <section>
+            <h2 id="text"><span>Es tiempo de</span><br>Viajar</h2>
+            <img src="img/bird1.png" id="bird1">
+            <img src="img/bird2.png" id="bird2">
+            <img src="img/forest.png" id="forest">
+            <a href="#" id="btn">Explorar</a>
+            <img src="img/rocks.png" id="rocks">
+            <img src="img/water.png" id="water">
+
+        </section>
+        <div class="sec">
+         <h2>Destinos</h2>
+         <p>
+            BALI, INDONESIA<br>
+            La isla de Bali, en Indonesia, es la número uno. ¿Por qué será? 
+            Es posible que sean las playas de arena blanca como Lovina Beach, 
+            el verde intenso de sus selvas en el Parque Nacional de Bali Occidental, 
+            los antiguos templos (más de 10.000) o los diferentes senderos para hacer excursionismo. 
+            Alquila una moto para moverte por la isla: no dejes de ir al templo Tanah Lot para ver atardecer, 
+            piérdete por los arrozales de Jatiluwih o en Tegalalang, escoge playa o lago, visita algún volcán o, 
+            incluso, aprovecha para casarte ¡Bali es la isla de los dioses!<br>
+            <br></br>REINO UNIDO<br>
+            Aunque circulen por la izquierda y midan las distancias en millas y yardas, 
+            Londres es la más popular de las ciudades del mundo. Historia y carácter, 
+            monumentos que son verdaderos iconos como el Big Ben o los mismísimos taxis tradicionales 
+            son ingredientes para una escapada perfecta. Hay de todo para todos: el arte de la Tate Modern,
+            las tendencias de moda de más rabiosa actualidad por sus calles, los mercadillos como el de Camden, 
+            los diferentes parques por donde caminar. Sube a la London Eye, Londres solo se puede abarcar desde 
+            las alturas.<br>
+            <br></br>PARIS, FRANCIA<br>
+            Podría ocupar la primera posición entra las ciudades más populares del mundo; 
+            pero esta vez, París, se ha quedado en la tercera posición. La ciudad de la luz, del amor, 
+            la ciudad de la literatura, está llena de atracciones suficientes para una vida. Es la única ciudad que
+            tiene dos lugares entre los diez de mayor interés turístico de Europa: la Torre Eiffel y Notre Dame. Pero, 
+            ¿qué más? Toda una clase de arte en el Museo del Louvre, callejear por sus barrios como Marais o el Barrio latino,
+            disfrutar de la gastronomía en algunos de sus bistro, pasear por la rivera del Sena o visitar el mundo de Amélie Poulain,
+            ¡París no se acaba nunca!<br>
+         </p>
+        </div>
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                
+                /*animacion para el texto*/
+                text.style.top = 50 + value * -0.5 + '%';
+                
+                /*animacion pajaro derecha*/
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+
+                /*animacion pajaro izquierda*/
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+
+                /*animacion boton*/
+                btn.style.marginTop = value *1.5 + 'px';
+
+                /*animacion rocas*/
+                rocks.style.top = value * -0.12 + 'px';
+
+                /*animacion bosque*/
+                forest.style.top = value * 0.25 + 'px';
+
+                /*animacion header*/
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
